@@ -1,8 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SeleniumIntro {
+public class WebDriverCommands {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
 
@@ -12,20 +11,14 @@ public class SeleniumIntro {
 
         String pageTitle = driver.getTitle();
         System.out.println("Page Title: " + pageTitle);
-        System.out.println("Length of the title: " + pageTitle.length());
 
-        String actualUrl = driver.getCurrentUrl();
+        driver.navigate().to("https://theautomationtechies.com/");
+        pageTitle = driver.getTitle();
+        System.out.println("Page Title: " + pageTitle);
 
-        if (url.equals(actualUrl)) {
-            System.out.println("Test Passed");
-        }
-        else{
-            System.out.println("Test Failed");
-        }
-
-        String pageSource = driver.getPageSource();
-
-        System.out.println(pageSource);
+        driver.navigate().back();
+        pageTitle = driver.getTitle();
+        System.out.println("Page Title: " + pageTitle);
 
         driver.close();
     }
