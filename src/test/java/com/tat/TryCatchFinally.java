@@ -1,4 +1,4 @@
-package test;
+package test.java.com.tat;
 
 public class TryCatchFinally {
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="6.347" tests="2" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="6.253" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.11+9-Ubuntu-0ubuntu2.18.04"/>
@@ -60,6 +60,6 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="TC01_testByClassName_countIs4" classname="test.SelectingTextBoxes" time="3.51"/>
-  <testcase name="TC02_testByClassName_countIs4" classname="test.SelectingTextBoxes" time="2.837"/>
+  <testcase name="TC01_testByClassName_countIs4" classname="test.SelectingTextBoxes" time="3.467"/>
+  <testcase name="TC02_testByClassName_countIs4" classname="test.SelectingTextBoxes" time="2.786"/>
 </testsuite>

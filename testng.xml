@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/home/automationtester/git/Selenium4">
         <classes>
-            <class name="test.SelectingTextBoxes">
+            <class name="test.java.com.tat.SelectingTextBoxes">
 <!--                <methods>-->
 <!--                    <include name="TC01_testByClassName_countIs4"/>-->
 <!--                    <include name="TC02_testByClassName_countIs4"/>-->

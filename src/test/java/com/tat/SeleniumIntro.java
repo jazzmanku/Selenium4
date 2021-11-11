@@ -1,4 +1,4 @@
-package test;
+package test.java.com.tat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

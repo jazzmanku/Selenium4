@@ -1,4 +1,4 @@
-package test;
+package test.java.com.tat;
 
 import java.util.ArrayList;
 import java.util.List;
