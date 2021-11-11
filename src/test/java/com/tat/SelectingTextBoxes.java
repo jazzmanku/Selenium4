@@ -28,13 +28,8 @@ public class SelectingTextBoxes {
              */
     @Test
     public void TC01_testByClassName_countIs4()  {
-        System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
+        WebDriver driver = SeleniumHandler.getDriver("CHROME");
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments(new String[]{"--headless"});
-        chromeOptions.addArguments(new String[]{"--ignore-certificate-errors"});
-
-        WebDriver driver = new ChromeDriver(chromeOptions);
 
 
         try{
@@ -49,16 +44,15 @@ public class SelectingTextBoxes {
             System.out.println("......................ERROR: " + e.getMessage());
         }
         finally {
-            driver.quit();
+            driver.close();
         }
     }
 
     @Test
-    public void TC02_testByClassName_countIs4()  {
+    public void TC02_addingLastNameToSecondTextBox()  {
         System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments(new String[]{"--headless"});
-        chromeOptions.addArguments(new String[]{"--ignore-certificate-errors"});
+        chromeOptions.addArguments(new String[]{"--headless","--ignore-certificate-errors","--no-sandbox"});
 
         WebDriver driver = new ChromeDriver(chromeOptions);
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
@@ -89,7 +83,7 @@ public class SelectingTextBoxes {
             System.out.println("......................ERROR: " + e.getMessage());
         }
         finally {
-            driver.quit();
+            driver.close();
         }
     }
 }
