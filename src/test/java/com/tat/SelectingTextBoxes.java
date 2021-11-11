@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -28,8 +29,14 @@ public class SelectingTextBoxes {
     @Test
     public void TC01_testByClassName_countIs4()  {
         System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
-        WebDriver driver = new ChromeDriver();
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments(new String[]{"--headless"});
+        chromeOptions.addArguments(new String[]{"--ignore-certificate-errors"});
+
+        WebDriver driver = new ChromeDriver(chromeOptions);
+
+
         try{
             driver.get(url);
             List<WebElement> webElementList =  driver.findElements(By.className("textBoxes"));
@@ -49,7 +56,11 @@ public class SelectingTextBoxes {
     @Test
     public void TC02_testByClassName_countIs4()  {
         System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments(new String[]{"--headless"});
+        chromeOptions.addArguments(new String[]{"--ignore-certificate-errors"});
+
+        WebDriver driver = new ChromeDriver(chromeOptions);
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
         try{
             driver.get(url);
