@@ -1512,12 +1512,12 @@ Select Box:
 <table>
 <tbody><tr><td>
 <select multiple="multiple" name="FromLB" size="10" style="width: 150;">
-<option id="country1" value="USA">USA</option>
+<option id="country1" value="USA" selected >USA</option>
 <option id="country2" value="Russia">Russia</option>
-<option id="country3" value="Japan">Japan</option>
+<option id="country3" value="Japan" selected>Japan</option>
 <option id="country4" value="Mexico">Mexico</option>
 <option id="country5" value="India">India</option>
-<option id="country6" value="Germany">Germany</option>
+<option id="country6" value="Germany" selected>Germany</option>
 <option id="country7" value="Italy">Italy</option>
 <option id="country8" value="Spain">Spain</option>
 <option id="country9" value="Malaysia">Malaysia</option>
@@ -1525,8 +1525,8 @@ Select Box:
 </select>
 </td>
 <td valign="middle" align="center">
-<input onclick="move(this.form.FromLB,this.form.ToLB)" value="-&gt;" type="button"><br>
-<input onclick="move(this.form.ToLB,this.form.FromLB)" value="&lt;-" type="button">
+<input id="right" onclick="move(this.form.FromLB,this.form.ToLB)" value="-&gt;" type="button"><br>
+<input id="left" onclick="move(this.form.ToLB,this.form.FromLB)" value="&lt;-" type="button">
 </td>
 <td>
 <select multiple="multiple" name="ToLB" size="10" style="width: 150;">
@@ -1538,9 +1538,9 @@ Select Box:
 
 
 
-<button onclick="myFunction()">Show Me Confirmation</button>
+<button id="confirmBtn" onclick="myFunction()">Show Me Confirmation</button>
 
-<div id="demo">You pressed Cancel!</div>
+<div id="demo">Press the confirmation button</div>
 <script>
 function myFunction()
 {
@@ -1548,7 +1548,7 @@ var x;
 var r=confirm("Press 'OK' or 'Cancel' button!");
 if (r==true)
   {
-  x="You pressed OK!";
+  x="You pressed Ok!";
   }
 else
   {
@@ -1558,8 +1558,8 @@ document.getElementById("demo").innerHTML=x;
 }
 </script>
 
-<input onclick="myFunction1()" value="Show Me Alert" type="button">
-<button onclick="myFunctionf()" class=" firepath-matching-node">Show Me Prompt</button>
+<input id = "alertBtn" onclick="myFunction1()" value="Show Me Alert" type="button">
+<button id ="promptBtn" onclick="myFunctionf()" >Show Me Prompt</button>
 
 <div id="Example">
 </div>
@@ -1568,11 +1568,11 @@ function myFunctionf()
 {
 var x;
 
-var human=prompt("Your Name Please","Jhon");
+var human=prompt("Your Name Please","John");
 
-if (person!=null)
+if (human!=null)
   {
-  x="HI " + human + "! Are you all right?";
+  x="HI " + human + "! how are you?";
   document.getElementById("Example").innerHTML=x;
   }
 }
