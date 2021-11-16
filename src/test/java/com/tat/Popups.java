@@ -49,8 +49,7 @@ public class Popups {
 
     @Test
     public void alertPopup(){
-        System.setProperty("webdriver.chrome.driver","./driver/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = SeleniumHandler.getDriver("FF");
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
         try{
             driver.manage().window().maximize();

@@ -20,12 +20,13 @@ public class SeleniumHandler {
     public static WebDriver getDriver(String browser) {
         WebDriver driver = null;
         switch (browser) {
-            case "CHROME":
+            case "CH":
                 System.setProperty(PROPERTY_DRIVER_CHROME, PATH_DRIVER_CHROME);
                 System.setProperty("webdriver.chrome.logfile", "./logs/chromedriver.log");
                 System.setProperty("webdriver.chrome.verboseLogging", "true");
+
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments(new String[]{"--headless","--ignore-certificate-errors","--no-sandbox"});
+                chromeOptions.addArguments(new String[]{"--headless","--ignore-certificate-errors","--incongnito"});
 
                 driver = new ChromeDriver(chromeOptions);
                 break;
