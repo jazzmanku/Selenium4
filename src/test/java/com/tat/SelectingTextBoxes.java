@@ -28,7 +28,7 @@ public class SelectingTextBoxes {
              */
     @Test
     public void TC01_testByClassName_countIs4()  {
-        WebDriver driver = SeleniumHandler.getDriver("CHROME");
+        WebDriver driver = SeleniumHandler.getDriver("FF");
         String url = "file:///home/automationtester/git/Selenium4/webPage/UI_Testing.htm";
 
 
